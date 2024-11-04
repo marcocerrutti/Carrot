@@ -1,0 +1,6 @@
+@Carrot.Services.CouponAPI_HostAddress = http://localhost:5268
+
+GET {{Carrot.Services.CouponAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
