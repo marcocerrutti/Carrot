@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carrot.Services.CouponAPI",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carrot.Web", "Carrot.Web\Carrot.Web.csproj", "{E8BAC0D8-1517-4403-AFAF-5AFC4B4E2A43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carrot.Services.AuthAPI", "Carrot.Services.AuthAPI\Carrot.Services.AuthAPI.csproj", "{3AC5B376-339D-4FAD-9FED-74CA26BBF28B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{E8BAC0D8-1517-4403-AFAF-5AFC4B4E2A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8BAC0D8-1517-4403-AFAF-5AFC4B4E2A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8BAC0D8-1517-4403-AFAF-5AFC4B4E2A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC5B376-339D-4FAD-9FED-74CA26BBF28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC5B376-339D-4FAD-9FED-74CA26BBF28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC5B376-339D-4FAD-9FED-74CA26BBF28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC5B376-339D-4FAD-9FED-74CA26BBF28B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +42,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5A9C4AE8-0D2C-4F2C-B8FB-D5538A55D79A} = {2F19C9AE-0CA3-4EF9-A8E6-9198042FC015}
 		{E8BAC0D8-1517-4403-AFAF-5AFC4B4E2A43} = {E7DE8C89-8989-4B8B-9DFB-79792DA831C1}
+		{3AC5B376-339D-4FAD-9FED-74CA26BBF28B} = {2F19C9AE-0CA3-4EF9-A8E6-9198042FC015}
 	EndGlobalSection
 EndGlobal
