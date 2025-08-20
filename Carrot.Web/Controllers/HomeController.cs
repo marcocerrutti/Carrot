@@ -1,4 +1,6 @@
 using Carrot.Web.Models;
+using Carrot.Web.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -18,6 +20,7 @@ namespace Carrot.Web.Controllers
             return View();
         }
 
+        [Authorize(Roles =SD.RoleAdmin)]
         public IActionResult Privacy()
         {
             return View();

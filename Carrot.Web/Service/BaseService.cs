@@ -10,12 +10,14 @@ namespace Carrot.Web.Service
     public class BaseService : IBaseService
     {
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly ITokenProvider _tokenProvider;
 
-        public BaseService(IHttpClientFactory httpClientFactory)
+        public BaseService(IHttpClientFactory httpClientFactory, ITokenProvider tokenProvider)
         {
             _httpClientFactory = httpClientFactory;
+            _tokenProvider = tokenProvider;
         }
-        async Task<ResponseDto?> IBaseService.SendAsync(RequestDto requestDto)
+        async Task<ResponseDto?> IBaseService.SendAsync(RequestDto requestDto, bool withBearer = true)
         {
             try
             {
@@ -25,7 +27,11 @@ namespace Carrot.Web.Service
                 HttpRequestMessage message = new();
                 message.Headers.Add("Accept", "application/json");
                 //token
-
+                if (withBearer)
+                {
+                    var token = _tokenProvider.GetToken();
+                    message.Headers.Add("Authorization", $"Bearer {token}");
+                }
 
                 message.RequestUri = new Uri(requestDto.Url);
                 if (requestDto.Data != null)
